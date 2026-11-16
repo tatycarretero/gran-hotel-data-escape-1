@@ -31,11 +31,11 @@ df = pd.DataFrame(data)
 
 # Introducción intencionada de valores nulos (NaN / Vacíos)
 df.loc[5, "cliente"] = ""
-df.loc[12, "precio_noche"] = ""
-df.loc[25, "noches"] = ""
+df.loc[12, "precio_noche"] = float("nan")
+df.loc[25, "noches"] = float("nan")
 df.loc[40, "estado"] = ""
 df.loc[58, "cliente"] = ""
-df.loc[72, "precio_noche"] = ""
+df.loc[72, "precio_noche"] = float("nan")
 
 # Introducción intencionada de filas duplicadas (10 filas exactamente iguales)
 duplicates = df.iloc[[3, 10, 15, 22, 30, 45, 50, 63, 77, 85]].copy()
